@@ -1,15 +1,20 @@
-Welcome to {{title}}
-{{product1.productName}}
-
-<ul>
-    <li *ngFor="let product of products">
-        {{product.productName}}
-    </li>
-</ul>
-<h3>ngModel</h3>
-<input type="text" [(ngModel)]="title"/>
-<h3>Interface-Model</h3>
-
-<h3>Two-Way Data Binding</h3>
-
-<router-outlet></router-outlet>
+<div class="container">
+    <app-homepage></app-homepage>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>ngModel</h3>
+            <input type="text" [(ngModel)]="title" />
+            <h3>Interface-Model</h3>
+        
+            <h3>Two-Way Data Binding</h3>
+        </div>
+        <div class="col-md-8">
+            <ul>
+                <li *ngFor="let product of products">
+                    {{product.productName}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
