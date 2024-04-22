@@ -1,0 +1,10 @@
+<!-- <ul class="list-group">
+    <li class="list-group-item">Eğitmenler</li>
+    <li class="list-group-item" *ngFor="let instructor of instructors">
+        <p>{{instructor.firstName}} {{instructor.lastName}}</p>
+    </li>
+</ul> -->
+<select class="form-select form-select-sm" style="width: 65%;">
+    <option selected>Eğitmen : Tümü</option>
+    <option *ngFor="let instructor of instructors">{{instructor.firstName}} {{instructor.lastName}}</option>
+</select>

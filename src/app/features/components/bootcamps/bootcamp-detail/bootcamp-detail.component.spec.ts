@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomepageComponent } from './homepage.component';
+import { BootcampDetailComponent } from './bootcamp-detail.component';
 
-describe('HomepageComponent', () => {
-  let component: HomepageComponent;
-  let fixture: ComponentFixture<HomepageComponent>;
+describe('BootcampDetailComponent', () => {
+  let component: BootcampDetailComponent;
+  let fixture: ComponentFixture<BootcampDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomepageComponent]
+      imports: [BootcampDetailComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HomepageComponent);
+    fixture = TestBed.createComponent(BootcampDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

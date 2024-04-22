@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-9">
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <input type="text" [(ngModel)]="filterText" class="form-control me-2" id="filterInput" placeholder="Q">
+        </div>
+        <div *ngIf="filterText.length>2" class="alert alert-success">
+            {{filterText}} aradınız
+        </div>
+    </div>
+</div>
+<div style="display:ruby; text-align:center; margin-bottom:400px;">
+    <div class="card" style="width: 18rem;" *ngFor="let bootcamp of bootcampList.items| filterBoocamp : filterText">
+        <img src="" class="card-img-top" alt="Bootcamp name image" height="50px">
+        <div class="card-body">
+            <h5 class="card-title">{{bootcamp.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <p class="card-text">Bitiş tarih : {{bootcamp.endDate.toString().substring(0,10)}}</p>
+            <a href="#" class="card-link">Detaya git</a>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-left: 35%; width: 150px;">
+    <button *ngIf="bootcampList.hasNext" type="button" (click)="onViewMoreClicked()" [disabled]="!bootcampList.hasNext"
+    class="btn border-primary ml-10">
+    Sonraki Sayfa
+</button>
+<button *ngIf="bootcampList.hasPrevious" type="button" (click)="onPreviousPageClicked()"
+    [disabled]="!bootcampList.hasPrevious" class="btn border-primary">
+    Önceki Sayfa
+</button>
+</div>
